@@ -425,6 +425,15 @@ function getLastElementsInArray(array = [], size = 0) {
     }
     return result.reverse();
 }
+function generateWeekdayStringsArray() {
+    const weekdays = [];
+    let day = require$$0().startOf("week");
+    for (let i = 0; i < 7; i++) {
+        weekdays.push(formatDate(day, "ddd"));
+        day = day.add(1, "day");
+    }
+    return weekdays;
+}
 function getNumberOfDay(dayString, startWeekOn) {
     let number = 0;
     let startDateModifier = 0;
@@ -453,7 +462,7 @@ function getNumberOfDay(dayString, startWeekOn) {
                 break;
         }
     }
-    ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].forEach((item, index) => {
+    generateWeekdayStringsArray().forEach((item, index) => {
         if (item.includes(dayString)) {
             number = (index + startDateModifier) % 7;
         }

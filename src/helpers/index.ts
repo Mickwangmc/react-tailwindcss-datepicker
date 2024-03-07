@@ -139,13 +139,13 @@ export function getLastElementsInArray(array: number[] = [], size = 0) {
 }
 
 export function generateWeekdayStringsArray() {
-  const weekdays = [];
-  let day = dayjs().startOf("week");
-  for (let i = 0; i < 7; i++) {
-      weekdays.push(formatDate(day, "ddd"));
-      day = day.add(1, "day");
-  }
-  return weekdays;
+    const weekdays = [];
+    let day = dayjs().startOf("week");
+    for (let i = 0; i < 7; i++) {
+        weekdays.push(formatDate(day, "ddd"));
+        day = day.add(1, "day");
+    }
+    return weekdays;
 }
 
 export function getNumberOfDay(dayString: string, startWeekOn?: string | null | undefined): number {
@@ -182,10 +182,10 @@ export function getNumberOfDay(dayString: string, startWeekOn?: string | null | 
     }
 
     generateWeekdayStringsArray().forEach((item, index) => {
-      if (item.includes(dayString)) {
-          number = (index + startDateModifier) % 7;
+        if (item.includes(dayString)) {
+            number = (index + startDateModifier) % 7;
         }
-      });
+    });
 
     return number;
 }

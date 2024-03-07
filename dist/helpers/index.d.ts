@@ -21,6 +21,7 @@ export declare function nextMonth(date: dayjs.Dayjs): dayjs.Dayjs;
 export declare function previousMonth(date: dayjs.Dayjs): dayjs.Dayjs;
 export declare function getFirstElementsInArray(array?: number[], size?: number): number[];
 export declare function getLastElementsInArray(array?: number[], size?: number): number[];
+export declare function generateWeekdayStringsArray(): string[];
 export declare function getNumberOfDay(dayString: string, startWeekOn?: string | null | undefined): number;
 export declare function getLastDaysInMonth(date: dayjs.Dayjs | string, size?: number): number[];
 export declare function getFirstDaysInMonth(date: string | dayjs.Dayjs, size?: number): number[];
